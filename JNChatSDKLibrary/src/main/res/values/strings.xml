@@ -1,0 +1,100 @@
+<resources>
+    <string name="chat_action_title_image">相册</string>
+    <string name="chat_action_title_photo">拍照</string>
+    <string name="chat_action_title_video">拍摄视频</string>
+    <string name="chat_action_title_voice_call">音频通话</string>
+    <string name="chat_action_title_video_call">视频通话</string>
+    <string name="action_photo">拍照</string>
+    <string name="action_image">相册</string>
+    <string name="action_collect">收藏</string>
+    <string name="action_location">位置</string>
+    <string name="action_file">文件</string>
+    <string name="action_card">名片</string>
+
+    <string name="zeffect_recordbutton_finger_up_to_cancal_send">手指上滑，取消发送</string>
+    <string name="zeffect_recordbutton_releasing_finger_to_cancal_send">松开手指，取消发送</string>
+    <string name="recordbutton_time_too_short">时间太短</string>
+    <string name="record_audio">按住 留言</string>
+
+    <string name="common_no_more_data">没有更多数据了</string>
+
+    <string name="http_unknown_error">请求出错，未知错误</string>
+    <string name="http_token_error">登录失效，请重新登录</string>
+    <string name="http_data_explain_error">数据解析异常，请稍后</string>
+    <string name="http_server_out_time">服务器请求超时，请稍后再试</string>
+    <string name="http_network_error">请求失败，请检查网络设置</string>
+    <string name="http_response_error">服务器响应异常，请稍后再试</string>
+    <string name="http_server_error">服务器连接异常，请稍后再试</string>
+    <string name="http_request_cancel">请求被中断，请重试</string>
+
+    <string name="lfrecyclerview_header_hint_normal">下拉加载</string>
+    <string name="lfrecyclerview_header_hint_ready">松开加载数据</string>
+    <string name="lfrecyclerview_header_hint_loading">正在加载...</string>
+    <string name="lfrecyclerview_header_last_time">上次更新时间：</string>
+    <string name="lfrecyclerview_footer_hint_normal">查看更多</string>
+    <string name="lfrecyclerview_footer_hint_ready">松开载入更多</string>
+    <string name="lfrecyclerview_header_hint_success">加载成功</string>
+    <string name="lfrecyclerview_header_hint_failt">加载失败</string>
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <string name="updated_just_now">刚刚更新</string>
+    <string name="time_error">时间有问题</string>
+
+    <string name="message_menu_copy">复制</string>
+    <string name="message_menu_transmit">转发</string>
+    <string name="message_menu_collect">收藏</string>
+    <string name="message_menu_withdraw">撤回</string>
+    <string name="message_menu_delete">删除</string>
+    <string name="message_menu_audio_receiver">听筒播放</string>
+
+
+    <!--群组-->
+    <string name="title_crowd">Crowd</string>
+    <string name="title_phone">Phone</string>
+    <string name="title_my">我的</string>
+    <string name="action_title_image">action_title_image</string>
+    <string name="iv_description">描述</string>
+    <string name="crowd_invitation_box_item_brief">群公告</string>
+    <string name="crowd_detail_qulification_rule">身份验证</string>
+    <string name="crowd_detail_qulification_quit_button">退出该群</string>
+    <string name="crowd_detail_title">群资料</string>
+    <string name="crowd_detail_qulification_dismiss_button">解散该群</string>
+    <string name="in_meeting_quit_notification">提  示</string>
+    <string name="in_meeting_quit_text">此操作将退出，是否继续?</string>
+    <string name="in_meeting_quit_quit_button">退出</string>
+    <string name="in_meeting_quit_cancel_button">取消</string>
+    <string name="conversation_quit_dialog_confirm_text">确定</string>
+    <string name="conversation_quit_dialog_cancel_text">取消</string>
+    <string name="crowd_detail_quit_confirm_title">确定退出该群吗?</string>
+    <string name="activiy_contact_group_button_confirm">确定</string>
+    <string name="activiy_contact_group_button_cancel">取消</string>
+    <string name="crowd_detail_dismiss_confirm_title">确定解散该群吗?</string>
+    <string name="crowd_create_name_input_hint">请输入群名称</string>
+    <!-- string array -->
+    <string name="crowd_rules_item_allows_anybody">允许任何人</string>
+    <string name="crowd_rules_item_allows_need_authentication">需要验证</string>
+    <string name="crowd_rules_item_donot_allows_anybody">不允许任何人</string>
+    <string name="notification_watiing_process">正在处理请稍后 &#8230;</string>
+
+
+    <string name="invite_numbers">邀请好友</string>
+    <string name="determine">确定</string>
+    <string name="cancel">取消</string>
+    <string name="user_info">个人信息</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="edit">编辑</string>
+    <string name="save">保存</string>
+
+
+    <string name="invitation_approval_str">邀请你加入</string>
+    <string name="join_group_str">申请加入</string>
+    <string name="invitation_conform">是否通过邀请?</string>
+    <string name="join_conform">是否通过加入申请?</string>
+    <string name="approve">同意</string>
+    <string name="disapprove">拒绝</string>
+<!--    工作台-->
+    <string name="work_bench">工作台</string>
+
+</resources>

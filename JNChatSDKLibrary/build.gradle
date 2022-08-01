@@ -40,8 +40,8 @@ dependencies {
 
 
 //    ************************************************************************************************
-    implementation files('libs/JndvChatLibrary-release-1.0.9.aar')
-    implementation files('libs/siplib-release-1.0.9.aar')
+    implementation files('libs\\JNChat-lib.jar')
+    implementation files('libs\\JNChat-sip.jar')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     //Group

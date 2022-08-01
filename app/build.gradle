@@ -56,6 +56,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     implementation 'androidx.navigation:navigation-fragment:2.3.0'
     implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation project(path: ':JNChatSDKLibrary')
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
@@ -64,8 +65,8 @@ dependencies {
 //    ************************************************************************************************
 //    implementation files('libs/JndvChatLibrary-release-1.0.9.aar')
 //    implementation files('libs/siplib-release-1.0.9.aar')
-    implementation files('libs\\JNChat-lib.jar')
-    implementation files('libs\\JNChat-sip.jar')
+//    implementation files('libs\\JNChat-lib.jar')
+//    implementation files('libs\\JNChat-sip.jar')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     //Group

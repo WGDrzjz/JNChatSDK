@@ -1,111 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.jndv.jndvchatlibrary">
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_LOGS"
-        tools:ignore="ProtectedPermissions" />
-
-<!--    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />-->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 联网权限 -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- 访问网络状态 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 操作存储卡 -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.CAMERA" /> <!-- 相机 -->
-    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动 -->
-
-    <!--定位权限-->
-    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <!-- 允许挂载和反挂载文件系统可移动存储 -->
-<!--    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>-->
-    <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <!-- 允许程序读取或写入系统设置 -->
-<!--    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>-->
-    <!-- 获取模拟定位信息 -->
-<!--    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>-->
+    package="com.jndv.jnchatsdk">
 
     <application
         android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
-        <activity android:name=".ui.crowd.activity.JCCrowdListActivity" />
-        <activity android:name=".ui.chat.activity.JCUserDetailActivity" />
-        <activity android:name=".ui.crowd.activity.JCCrowdNumbersInviteActivity" />
-        <activity android:name=".chatSIP.JCPjSipTestActivity" />
-        <activity android:name=".chatSIP.JCPjSipVideoActivity" />
-        <activity android:name=".chatSIP.JCPjSipP2PActivity" />
-        <activity android:name=".ui.JCbaseFragmentActivity" />
-        <activity android:name=".ui.crowd.activity.JCCrowdDetailActivity" />
-        <activity android:name=".ui.crowd.activity.JCCrowdCreateActivity" />
-        <activity android:name=".ui.crowd.activity.JCCrowdMembersActivity" />
-        <activity android:name=".ui.chat.activity.JCChatActivity" />
-        <activity android:name=".ui.location.JCLocationExtendActivity" />
-        <activity android:name=".ui.location.JCLocationSelectActivity" />
-
-
-        <meta-data
-            android:name="design_width"
-            android:value="1080" />
-        <meta-data
-            android:name="design_height"
-            android:value="1920" />
-
-        <provider
-            android:name="com.jndv.jndvchatlibrary.utils.JCOpenFileProvider"
-            android:authorities="com.jndv.jndvchatlibrary.fileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
-
-        <activity
-            android:name=".ui.crowd.activity.JCCrowdContentUpdateActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".ui.chat.activity.JCOrganzationListActivity" />
-        <activity android:name=".ksyplayer.VideoPlayerActivity" />
-
-        <activity android:name=".ksyplayer.JCMonitorPlayerActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".ui.chat.activity.TextureVodActivity" />
-
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote"/>
-        <!-- AK鉴权 -->
-        <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="YRx8550qOYDeADS4VDZoTt7B8mme1Geb" /> <!-- http://lbsyun.baidu.com/apiconsole/key -->
-
-        <receiver
-            android:name=".mpush.MPushReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="com.mpush.HEALTH_CHECK" />
-                <action android:name="com.mpush.NOTIFY_CANCEL" />
-                <action android:name="com.mpush.MESSAGE_RECEIVED" />      <!--收到PUSH消息-->
-                <action android:name="com.mpush.BIND_USER" />            <!--收到绑定用户消息-->
-                <!--此值要改为自己的应用的applicationId  @see MPushService-->
-                <category android:name="com.jndv.jndvchatlibrary" />
-            </intent-filter>
-        </receiver>
-
-        <service
-            android:name=".mpush.MPushService"
-            android:enabled="true"
-            android:exported="true" />
 
     </application>
 
