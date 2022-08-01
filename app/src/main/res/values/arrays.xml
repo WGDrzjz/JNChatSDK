@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="crowd_rules">
+        <item>@string/crowd_rules_item_allows_anybody</item>
+        <item>@string/crowd_rules_item_allows_need_authentication</item>
+       <!-- <item>@string/crowd_rules_item_donot_allows_anybody</item>-->
+    </string-array>
+
+    <string-array name="crowd_permission">
+        <item>关闭</item>
+        <item>开启</item>
+       <!-- <item>@string/crowd_rules_item_donot_allows_anybody</item>-->
+    </string-array>
+</resources>

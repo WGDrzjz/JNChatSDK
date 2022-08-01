@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/soil_iv_audiochat_bg"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/video_frame"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <FrameLayout
+                android:id="@+id/big_window_video_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <SurfaceView
+                    android:id="@+id/p2p_out_video_remote_surface"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <FrameLayout
+                android:id="@+id/left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/conversation_fragment_outing_video_card_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/conversation_fragment_video_outing_call_avatar"
+                        android:layout_width="@dimen/dimen_100"
+                        android:layout_height="@dimen/dimen_100"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@mipmap/soil_iv_default"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/conversation_fragment_video_outing_call_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:maxEms="6"
+                        android:maxLines="1"
+                        android:text="name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_20"
+                        app:layout_constraintBottom_toTopOf="@+id/conversation_fragment_video_outing_waiting_text"
+                        app:layout_constraintStart_toEndOf="@+id/conversation_fragment_video_outing_call_avatar"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/conversation_fragment_video_outing_waiting_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="呼叫中..."
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/conversation_fragment_video_outing_call_avatar"
+                        app:layout_constraintTop_toBottomOf="@+id/conversation_fragment_video_outing_call_name" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/conversation_fragment_connected_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/conversation_fragment_connected_title_text"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/fragment_conversation_connected_title_text_margin_top"-->
+                    <!--android:text="@string/conversation_video_title_text"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="@dimen/txt_size_20"-->
+                    <!--android:visibility="visible" />-->
+
+                    <TextView
+                        android:id="@+id/p2p_out_video_connected_time_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_size_20"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_conversation_connected_video_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+            android:orientation="vertical"
+            >
+            <FrameLayout
+                android:id="@+id/small_window_video_layout"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="@dimen/dimen_176"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/dimen_5"
+                android:layout_marginRight="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_5">
+
+                <SurfaceView
+                    android:id="@+id/p2p_out_video_local_surface"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/p2p_out_video_reverse_camera_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dimen_5"
+                    android:src="@drawable/converse_camera_button"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/p2p_bottom_color"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                >
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:id="@+id/p2p_out_video_camera_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/p2p_out_video_connected_open_or_close_camera_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/conversation_connected_camera_button" />
+
+                    <TextView
+                        android:id="@+id/p2p_out_video_connected_open_or_close_camera_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="摄像头"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/p2p_out_video_hangUp_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/conversation_fragment_connected_video_hang_up_button_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/conversation_connected_cancel_button" />
+
+                    <TextView
+                        android:id="@+id/conversation_fragment_connected_video_hang_up_button_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="挂  断"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:id="@+id/p2p_out_video_mute_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/p2p_out_video_mute_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/message_voice_mute" />
+
+                    <TextView
+                        android:id="@+id/p2p_out_video_mute_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="静 音"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/p2p_out_video_reverse_camera_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/dimen_5"
+            android:src="@drawable/converse_camera_button"
+            android:visibility="gone" />
+    </FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/incoming_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/pjsip_p2p_avatar"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_100"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="头像"
+            android:src="@mipmap/soil_iv_default"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+             />
+        <TextView
+            android:id="@+id/pjsip_p2p_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="vovo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pjsip_p2p_avatar" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/pjsip_p2p_connected_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pjsip_p2p_name" />
+        <TextView
+            android:id="@+id/pjsip_p2p_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="邀请您进行视频通话..."
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pjsip_p2p_connected_time" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            >
+            <LinearLayout
+
+                android:id="@+id/pisip_p2p_incoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:id="@+id/pjsip_incoming_reject"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/conversation_connected_cancel_button"
+                        android:padding="32dp"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintVertical_bias="0.7" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="拒接"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_14" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pjsip_incoming_accept"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/conversation_connected_confirm_button"
+                        android:padding="32dp"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintVertical_bias="0.7" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="接听"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

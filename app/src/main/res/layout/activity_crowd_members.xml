@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_gray"
+    tools:context=".ui.crowd.activity.JCCrowdMembersActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/crowd_add_friend_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/group_chat_create_sv_bg"
+        android:focusable="false"
+        app:queryBackground="@null"
+        app:queryHint="搜索"
+        app:searchIcon="@drawable/group_chat_create_sv_icon"
+        app:submitBackground="@null">
+
+    </androidx.appcompat.widget.SearchView>
+
+    <ListView
+        android:id="@+id/crowd_add_friend_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none" />
+
+</com.zhy.autolayout.AutoLinearLayout>

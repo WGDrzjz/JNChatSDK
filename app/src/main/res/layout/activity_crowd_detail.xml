@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crowd_detail_bg"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_marginBottom="1dp"
+            android:padding="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/crowd_detail_guideline_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/iv_description"
+                android:maxHeight="@dimen/crowd_create_icon_max_height_size"
+                android:src="@drawable/crowd_default_icon"
+                 />
+            <!--android:maxWidth="@dimen/detail_detail_name_max_width"-->
+            <TextView
+                android:id="@+id/crowd_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="测试群"
+                android:layout_weight="1"
+                android:textColor="@color/activity_contact_detail_item_color"
+                android:textSize="@dimen/list_user_info_tv_text_size" />
+
+            <TextView
+                android:id="@+id/tv_join"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_green"
+                android:padding="16dp"
+                android:text="审核通知"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/crowd_detail_brief_button"
+            android:padding="15dp"
+            android:background="@color/white"
+            android:layout_marginBottom="1dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/crowd_detail_brief_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/crowd_invitation_box_item_brief"
+                android:textColor="@color/activity_contact_detail_item_color"
+                android:textSize="@dimen/list_user_info_tv_text_size"
+                />
+
+            <TextView
+                android:id="@+id/crowd_detail_brief"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="群公告内容"
+                android:layout_weight="1"
+                android:textColor="@color/activity_contact_detail_item_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imageview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:padding="10dp"
+                android:src="@drawable/title_right_goto_black" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/crowd_detail_tv_headcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="总人数：0"
+            android:textColor="@color/activity_contact_detail_item_color"
+            />
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="32dp">
+
+                <GridView
+                    android:id="@+id/crowd_detail_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="5"
+                    android:paddingStart="@dimen/crowd_detail_left_padding"
+                    android:paddingEnd="@dimen/crowd_detail_left_padding"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth" />
+
+
+                <TextView
+                    android:id="@+id/crowd_detail_tv_btn_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="查看全部成员" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:paddingStart="@dimen/crowd_detail_left_padding"
+                    android:paddingEnd="@dimen/crowd_detail_left_padding"
+                    android:text="@string/crowd_detail_qulification_rule"
+                    android:textColor="@color/activity_contact_detail_item_color"
+                    android:textSize="@dimen/common_item_text_size" />
+
+                <TextView
+                    android:id="@+id/crowd_detail_radio_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="16dp"
+                    android:text="@string/crowd_rules_item_allows_anybody"
+                    android:visibility="gone"
+                    android:textColor="@color/activity_contact_detail_item_color"
+                    android:textSize="@dimen/crowd_detail_rb_text_size" />
+
+                <RadioGroup
+                    android:id="@+id/crowd_detail_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <RadioButton
+                        android:id="@+id/radio0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/common_radio_button_margin_top"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/ws_common_btn_radio_selector"
+                        android:padding="10dp"
+                        android:tag="0"
+                        android:text="@string/crowd_rules_item_allows_anybody"
+                        android:textColor="@color/activity_contact_detail_item_color"
+                        android:textSize="@dimen/crowd_detail_rb_text_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#c0c0c0"
+                        android:visibility="gone"/>
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/common_radio_button_margin_top"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/ws_common_btn_radio_selector"
+                        android:padding="10dp"
+                        android:tag="1"
+                        android:text="@string/crowd_rules_item_allows_need_authentication"
+                        android:textColor="@color/activity_contact_detail_item_color"
+                        android:textSize="@dimen/crowd_detail_rb_text_size"
+                        android:visibility="visible"/>
+
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/crowd_detail_button_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/crowd_detail_exit_btn_bg"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/crowd_detail_qulification_quit_button"
+                    android:textColor="@color/common_item_text_color_write"
+                    android:textSize="@dimen/list_user_info_tv_text_size" />
+
+            </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

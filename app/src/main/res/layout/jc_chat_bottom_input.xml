@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/textMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/jc_view_bottom_bg"
+        android:paddingBottom="@dimen/padding_8"
+        android:paddingTop="@dimen/padding_8">
+
+    <FrameLayout
+        android:id="@+id/switchLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextMessage"
+        android:layout_marginLeft="@dimen/padding_6"
+        android:layout_marginRight="@dimen/padding_6">
+
+        <ImageView
+            android:id="@+id/buttonAudioMessage"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/jc_button_bottom_audio"
+            android:scaleType="center" />
+
+        <ImageView
+            android:id="@+id/buttonTextMessage"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/jc_button_bottom_keyboard"
+            android:visibility="gone"
+            android:scaleType="center" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/audioTextSwitchLayout"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/switchLayout"
+        android:layout_marginRight="@dimen/padding_6"
+        android:layout_toLeftOf="@+id/emoji_button"
+        android:layout_toRightOf="@+id/switchLayout"
+        >
+
+        <com.jndv.jndvchatlibrary.ui.chat.utils.JCrecordButton
+            android:id="@+id/audioRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/jc_message_input_edittext_box"
+            android:text="@string/record_audio"
+            android:textColor="@color/color_black_333333"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+<!--        <com.dongtu.store.widget.DTStoreEditView-->
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/padding_6"
+            android:layout_toLeftOf="@+id/emoji_button"
+            android:layout_toRightOf="@+id/switchLayout"
+            android:autoLink="web|email|phone"
+            android:background="#f6f5f5"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textCursorDrawable="@null"
+            android:paddingLeft="@dimen/padding_8"
+            android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/emoji_button"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignBottom="@id/audioTextSwitchLayout"
+        android:layout_marginRight="@dimen/padding_6"
+        android:layout_toLeftOf="@+id/sendLayout"
+        android:background="@drawable/jc_input_emotion"
+        android:visibility="gone"
+        android:scaleType="center" />
+
+    <FrameLayout
+        android:id="@+id/sendLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/audioTextSwitchLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/padding_6">
+
+        <ImageView
+            android:id="@+id/buttonMoreFuntionInText"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@drawable/jc_input_plus"
+            android:scaleType="center" />
+
+        <Button
+            android:id="@+id/buttonSendMessage"
+            android:visibility="gone"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/jc_txt_primary_8"
+            android:paddingBottom="@dimen/padding_6"
+            android:paddingTop="@dimen/padding_6"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+</RelativeLayout>
+<!--    <com.dongtu.store.widget.DTStoreKeyboard-->
+<!--        android:id="@+id/msg_input_box"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:visibility="gone" />-->
+
+</LinearLayout>

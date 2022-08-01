@@ -1,5 +1,57 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="txt_size_18">18sp</dimen>
+    <dimen name="txt_size_20">20sp</dimen>
+    <dimen name="txt_size_10">10sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+
+    <dimen name="padding_20">20dip</dimen>
+    <dimen name="padding_16">16dip</dimen>
+    <dimen name="padding_10">10dip</dimen>
+    <dimen name="padding_8">8dip</dimen>
+    <dimen name="padding_6">6dip</dimen>
+    <dimen name="padding_4">4dip</dimen>
+    <dimen name="padding_1">1dip</dimen>
+
+    <dimen name="message_bottom_function_viewpager_height">220dp</dimen>
+
+    <!--群组-->
+    <dimen name="list_user_info_tv_text_size">18sp</dimen>
+    <dimen name="crowd_create_icon_max_height_size">138px</dimen>
+    <dimen name="crowd_detail_left_padding">8dp</dimen>
+    <dimen name="common_item_text_size">12sp</dimen>
+    <dimen name="crowd_detail_rb_text_size">18sp</dimen>
+    <dimen name="common_radio_button_margin_top">16dp</dimen>
+    <dimen name="common_dialog_text_size">18sp</dimen>
+    <dimen name="dialog_out_ll_padding">50px</dimen>
+    <dimen name="dialog_title_hint_tv_text_size">64px</dimen>
+    <dimen name="list_auto_user_info_tv_text_size">56px</dimen>
+    <dimen name="contacts_list_icon_width_height_size">150px</dimen>
+    <dimen name="title_height_px">150px</dimen>
+    <dimen name="default_status_bar_height">25dp</dimen>
+    <dimen name="default_action_bar_height">54dp</dimen>
+    <dimen name="default_bottom_bar_height">60dp</dimen>
+
+
+    <dimen name="dimen_0">0.0dip</dimen>
+    <dimen name="dimen_0.5">0.5dip</dimen>
+    <dimen name="dimen_1">1dip</dimen>
+    <dimen name="dimen_1.5">1.5dip</dimen>
+    <dimen name="dimen_2">2dip</dimen>
+    <dimen name="dimen_3">3dip</dimen>
+    <dimen name="dimen_4">4dip</dimen>
+    <dimen name="dimen_5">5dip</dimen>
+    <dimen name="dimen_7">7dip</dimen>
+    <dimen name="dimen_8">8dip</dimen>
+    <dimen name="dimen_14">14dip</dimen>
+    <dimen name="dimen_15">15dip</dimen>
+    <dimen name="dimen_16">16dip</dimen>
+    <dimen name="dimen_100">100dip</dimen>
+    <dimen name="dimen_120">120dip</dimen>
+    <dimen name="dimen_176">176dip</dimen>
+
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
+<!--    地图-->
+    <dimen name="common_utils_divider_height">1dp</dimen>
 </resources>

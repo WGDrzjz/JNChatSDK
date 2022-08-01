@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_organization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/dimen_16" >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/padding_8"
+            android:layout_marginBottom="@dimen/padding_8"
+            android:background="@drawable/jc_organzation_depart"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="组织结构"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/padding_8"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_organization2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dimen_16" >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/padding_8"
+            android:layout_marginBottom="@dimen/padding_8"
+            android:background="@drawable/jc_organzation_depart"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="组织结构"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/padding_8"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_monitors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/dimen_16" >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/padding_8"
+            android:layout_marginBottom="@dimen/padding_8"
+            android:background="@drawable/jc_organzation_depart"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="监控列表"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/padding_8"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dimen_16" >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/padding_8"
+            android:layout_marginBottom="@dimen/padding_8"
+            android:background="@drawable/jc_organzation_depart"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的群组"
+            android:textSize="@dimen/txt_size_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/padding_8"
+            />
+    </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="4dp"
+    android:background="@color/text_bg"
+    />
+
+<!--    <com.scwang.smart.refresh.layout.SmartRefreshLayout-->
+<!--        android:id="@+id/list_refresh"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <com.yanzhenjie.recyclerview.SwipeRecyclerView-->
+<!--            android:id="@+id/recycle_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+<!--    </com.scwang.smart.refresh.layout.SmartRefreshLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_friend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <com.gjiazhe.wavesidebar.WaveSideBar
+            android:id="@+id/wavesidebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
