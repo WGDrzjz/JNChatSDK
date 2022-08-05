@@ -32,6 +32,7 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -40,8 +41,10 @@ dependencies {
 
 
 //    ************************************************************************************************
-    implementation files('libs\\JNChat-lib.jar')
+//    implementation files('libs\\JNChat-lib.jar')
+    implementation files('libs\\JNChat-lib-d.jar')
     implementation files('libs\\JNChat-sip.jar')
+    implementation files('libs\\BaiduLBS_Android.jar')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     //Group
@@ -131,3 +134,17 @@ dependencies {
     api 'com.github.LinweiJ:LoadingDialog:V0.0.1'
 
 }
+
+task makeJar(type: Copy) {
+    //删除存在的（注意mylibrary是自己命名的，名字随便改）
+    delete 'build/libs/JNChatSDKLibrary.jar'
+//    设置拷贝的文件，需要根据AS的版本找到响应的文件夹
+    from('build/intermediates/aar_main_jar/release')
+//    jar包最后的文件目录
+    into('build/libs/')
+//    include ,exclude参数来设置过滤（我们只关心classes.jar这个文件）
+    include('classes.jar')
+//    重命名（注意mylibrary是自己命名的，名字随便改）
+    rename('classes.jar', 'JNChatSDKLibrary.jar')
+}
+makeJar.dependsOn(build)
